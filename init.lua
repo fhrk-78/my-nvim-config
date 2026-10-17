@@ -1,5 +1,12 @@
 require("config.lazy")
 
+require("config.terminals")
+
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
+vim.opt.clipboard = 'unnamedplus'
+
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
@@ -8,12 +15,8 @@ vim.opt.cursorline = true
 
 vim.api.nvim_create_autocmd("VimEnter", {
     callback = function()
-        vim.cmd("ToggleTerm")
+        _G.toggle_terminal("pwsh")
         vim.cmd("NvimTreeOpen")
     end,
 })
-
-vim.api.nvim_create_user_command("Q", function()
-    vim.cmd("qa")
-end, {})
 

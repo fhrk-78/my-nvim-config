@@ -89,7 +89,7 @@ return {
       open_mapping = [[<C-\>]],
       start_in_insert = true,
       persist_size = true,
-      close_on_exit = false,
+      close_on_exit = true,
       shell = vim.o.shell,
     },
   },

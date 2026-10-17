@@ -1,7 +1,7 @@
 return {
-  {
+  --[[{
     'vyfor/cord.nvim'
-  },
+  },--]]
   {
     "windwp/nvim-autopairs",
     event = "InsertEnter",
